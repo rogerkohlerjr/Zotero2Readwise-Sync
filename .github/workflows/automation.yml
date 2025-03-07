@@ -19,7 +19,7 @@ jobs:
       - name: 🐍 Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: '3.122'
+          python-version: '3.12'
 
       - name: 💿 Install Zotero2Readwise Python package
         run: pip install zotero2readwise
