@@ -16,13 +16,13 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: 🐍 Set up Python 3.11
+      - name: 🐍 Set up Python 3.9
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.9'
 
       - name: 💿 Install Zotero2Readwise Python package
-        run: pip install zotero2readwise distutils
+        run: pip install zotero2readwise
 
       - name: 📥 Download the Python script needed for automation
         run:  curl https://raw.githubusercontent.com/e-alizadeh/Zotero2Readwise/master/zotero2readwise/run.py -o run.py
