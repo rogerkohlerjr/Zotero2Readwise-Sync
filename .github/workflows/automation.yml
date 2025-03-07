@@ -28,7 +28,7 @@ jobs:
         run:  curl https://raw.githubusercontent.com/e-alizadeh/Zotero2Readwise/master/zotero2readwise/run.py -o run.py
 
       - name: Echo command line args
-        run: echo "python run.py --library_type user --include_notes yes --include_notes yes ${{ secrets.READWISE_TOKEN }} ${{ secrets.ZOTERO_KEY }} ${{ secrets.ZOTERO_ID }}" | sed 's/./& /g'
+        run: echo "python run.py --library_type user --include_annotations yes --include_notes yes ${{ secrets.READWISE_TOKEN }} ${{ secrets.ZOTERO_KEY }} ${{ secrets.ZOTERO_ID }}" | sed 's/./& /g'
 
       - name: 🚀 Run Automation
-        run: python run.py --library_type user --include_notes yes --include_notes yes ${{ secrets.READWISE_TOKEN }} ${{ secrets.ZOTERO_KEY }} ${{ secrets.ZOTERO_ID }}
+        run: python run.py --library_type user --include_annotations yes --include_notes yes ${{ secrets.READWISE_TOKEN }} ${{ secrets.ZOTERO_KEY }} ${{ secrets.ZOTERO_ID }}
