@@ -26,7 +26,11 @@ jobs:
 
       - name: 📥 Download the Python script needed for automation
         run:  curl https://raw.githubusercontent.com/e-alizadeh/Zotero2Readwise/master/zotero2readwise/run.py -o run.py
+
+      - name: Gather command line args
         run: CMD="python run.py --library_type user --include_notes yes --include_notes yes ${{ secrets.READWISE_TOKEN }} ${{ secrets.ZOTERO_KEY }} ${{ secrets.ZOTERO_ID }}"
+
+      - name: Report command line args
         run: echo ${{CMD}}
       - name: 🚀 Run Automation
         run: python run.py --library_type user --include_notes yes --include_notes yes ${{ secrets.READWISE_TOKEN }} ${{ secrets.ZOTERO_KEY }} ${{ secrets.ZOTERO_ID }}
